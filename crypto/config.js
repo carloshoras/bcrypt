@@ -1,4 +1,4 @@
-const crypto = require('crypto')
+const crypto = require('node:crypto')
 const bcrypt = require('bcrypt')
 
 const secret = crypto.randomBytes(64).toString('hex');

@@ -9,9 +9,13 @@ app.use(express.json());
 
 app.use(
     session({
+      // para que cuando enviemos el token en jwt, matchee
       secret: hashedSecret,
+      //false para que no guarde todo el rato aunque no haya cambio
       resave: false,
+      //la sesion una vez entras, esta inicializada
       saveUninitialized: true,
+      //aqui se guardan datos de sesion del usuario que se enviaran al servidor
       cookie: { secure: false },
     })
 );
